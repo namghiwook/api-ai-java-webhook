@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/webhook")
 public class HelloWorldController {
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST, produces={"application/json; charset=UTF-8"})
     public @ResponseBody WebhookResponse webhook(@RequestBody String obj){
 
         System.out.println(obj);
 
-        return new WebhookResponse(@"³¯¾¾¿©? ±×Áö°°¾Æ¿ä.", @"³¯¾¾¿©? ±×Áö°°¾Æ¿ä.");
+        return new WebhookResponse("ë‚ ì”¨ì—¬? ê·¸ì§€ê°™ì•„ìš”.", "ë‚ ì”¨ì—¬? ê·¸ì§€ê°™ì•„ìš”.");
     }
 }
