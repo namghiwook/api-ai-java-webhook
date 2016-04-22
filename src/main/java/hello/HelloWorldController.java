@@ -15,6 +15,6 @@ public class HelloWorldController {
 
         System.out.println(obj);
 
-        return new WebhookResponse("날씨여? 그지같아요.", "날씨여? 그지같아요.");
+        return new WebhookResponse(@"날씨여? 그지같아요.", @"날씨여? 그지같아요.");
     }
 }
